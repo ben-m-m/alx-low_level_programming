@@ -1,2 +1,10 @@
-#!/bin/bash
-gcc -c $CFILE
+#include <stdio.h>                                                                                                                                                                            
+/**                                                                                                                                                                                           
+ *prints a given string                                                                                                                                                                       
+ *results to 0                                                                                                                                                                                
+ */                                                                                                                                                                                           
+int main(void)                                                                                                                                                                                
+{                                                                                                                                                                                             
+  puts("Programming is like building a multilingual puzzle");                                                                                                                                 
+    return (0);                                                                                                                                                                               
+}
