@@ -8,9 +8,9 @@ int main(void)
 {
 	char x;
 
-	x = " _putchar ";
+	char *x = " _putchar ";
 
-	_putchar("%s", x);
+	putchar("%s", x);
 
 	return (0);
 }
