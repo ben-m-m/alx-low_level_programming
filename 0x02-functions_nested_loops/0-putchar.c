@@ -6,9 +6,9 @@
 
 int main(void)
 {
-	char x;
+	char *x;
 
-	char *x = " _putchar ";
+	char x = " _putchar ";
 
 	putchar("%s", x);
 
