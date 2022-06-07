@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	char *x;
+	char x;
 
 	char x = " _putchar ";
 
