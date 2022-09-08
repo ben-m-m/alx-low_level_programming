@@ -2,7 +2,7 @@
 /**
  * main - entrypoint
  *
- * return: always 0
+ * Return: always 0
  *
  */
 
