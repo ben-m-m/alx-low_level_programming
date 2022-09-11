@@ -13,15 +13,15 @@ int main(void)
 
 	for (hunds = 0; hunds <= 9; hunds++)
 	{
-	for (tens = hund + 1; tens <= 9; tens++)
+	for (tens = hunds + 1; tens <= 9; tens++)
 	{
 	for (ones = tens + 1; ones <= 9; ones++)
 	{
-	putchar(hund + '0');
+	putchar(hunds + '0');
 	putchar(tens + '0');
 	putchar(ones + '0');
 
-	if (hund < 7)
+	if (hunds < 7)
 	{
 	putchar(',');
 	putchar(' ');
