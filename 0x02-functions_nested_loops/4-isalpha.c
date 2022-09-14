@@ -7,7 +7,7 @@
  * Return: 1 if alpha else 0
  */
 
-int _isalpha(c)
+int _isalpha(int c)
 {
 	if (c >= 65 && c <= 90)
 	{
