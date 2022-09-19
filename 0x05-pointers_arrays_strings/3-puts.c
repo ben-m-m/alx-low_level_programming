@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _puts - print string to stdout
  * @str: string parameter
@@ -16,6 +17,7 @@ void _puts(char *str)
 			putchar('\n');
 			break;
 		}
+
 		putchar(str[count]);
 		count++;
 	}
