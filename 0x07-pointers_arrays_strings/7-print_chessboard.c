@@ -6,15 +6,19 @@
 
 void print_chessboard(char (*a)[8])
 {
-	int row;
-	int column;
+	int row, column;
 
-	for (row = 0; row <= 8; row++)
+	row = column = 0;
+
+	while (row < 8)
 	{
-		for (column = 0; column <= 8; column++)
+		column = 0;
+		while (column < 8)
 		{
 			_putchar(a[row][column]);
-			_putchar('\n');
+				column++
 		}
+		_putchar('\n');
+		row++
 	}
 }
