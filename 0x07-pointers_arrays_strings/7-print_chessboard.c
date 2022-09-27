@@ -3,6 +3,7 @@
 /**
  * print_chessboard - prints chessboard
  * @a: two dimensional array
+ * Return: (0)
  */
 
 void print_chessboard(char (*a)[8])
@@ -17,9 +18,9 @@ void print_chessboard(char (*a)[8])
 		while (column < 8)
 		{
 			_putchar(a[row][column]);
-				column++
+				column++;
 		}
 		_putchar('\n');
-		row++
+		row++;
 	}
 }
