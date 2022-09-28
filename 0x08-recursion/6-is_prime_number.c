@@ -22,7 +22,7 @@ int prime_no(int n, int div)
 
 int is_prime_number(int n)
 {
-	
+
 	int div = 3;
 
 	if (n % 2 == 0 || n < 2)
