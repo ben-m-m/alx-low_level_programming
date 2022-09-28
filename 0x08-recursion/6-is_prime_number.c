@@ -20,7 +20,7 @@ int prime_no(int n, int div)
  * Return: (1) or (0) if not
  */
 
-int is_prime_number(int n);
+int is_prime_number(int n)
 {
 	
 	int div = 3;
