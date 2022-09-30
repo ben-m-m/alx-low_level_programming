@@ -1,59 +1,57 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 /**
- * isInteger - checks if s is an integer
- * @s: string to check
- * Return: 0 or 1
+ * checker - checks for valid input
+ * @argc: argument count
+ * @i: counter for argv[]
+ * @j: counter for argv[][]
+ * @argv: argument vector
+ * Return: 0 on success, 1 on failure
  */
-
-int isInteger(const char *s)
+int checker(int argc, int i, unsigned int j, char *argv[])
 {
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		if (s[i] < '0' || s[i] > '0')
-		{
-			return (0);
-		}
-		i++;
-	}
-	return (1);
+	for (i = 1; i <= argc; i++)
+		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
+			if (isdigit(argv[i][j]) == 0)
+				return (1);
+	return (0);
 }
-
 /**
- * main - makes change
- * @argc: int
- * @argv: list
- * Return: 0
+ * main - Prints the minimum number of coins
+ * to make change for an amount of cents.
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 on success
  */
-
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	int i = 0, coin = 0, coinUsed = 0;
-	int coins[] = {25, 10, 5, 2, 1};
+	unsigned int cents;
+	int coins;
 
-	if (argc != 2)
+	cents = coins = 0;
+	if (argc == 2)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	if (isInteger(argv[1]))
-	{
-		i = atoi(argv[1]);
-		while (i > 0 && coin <= 4)
+		if (argv[1][0] == '-')
+			printf("0\n");
+		if (checker(argc, 1, 0, argv) == 0)
 		{
-			if (i >= coins[coin])
-			{
-				i -= coins[coin];
-				coinUsed++;
-			}
-			else
-			{
-				coin++;
-			}
+			cents = atoi(argv[1]);
+			for ( ; cents >= 25; coins++, cents -= 25)
+				;
+			for ( ; cents >= 10; coins++, cents -= 10)
+				;
+			for ( ; cents >= 5; coins++, cents -= 5)
+				;
+			for ( ; cents >= 2; coins++, cents -= 2)
+				;
+			for ( ; cents >= 1; coins++, cents--)
+				;
+			printf("%d\n", coins);
 		}
 	}
-	printf("%i\n", coinUsed);
+	else
+		printf("Error\n");
 	return (0);
 }
