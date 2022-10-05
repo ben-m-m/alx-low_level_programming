@@ -60,7 +60,7 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	int size1, size2;
 
-	if (si == NULL)
+	if (s1 == NULL)
 	{
 		s1 = "";
 	}
