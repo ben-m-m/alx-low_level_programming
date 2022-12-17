@@ -1,4 +1,3 @@
 #!/bin/bash
 gcc *.c -c -fpic
-gcc *.o -shared -o liball.so
-
+sed gcc *.o -shared -o liball.so
