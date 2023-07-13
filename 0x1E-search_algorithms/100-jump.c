@@ -7,9 +7,10 @@
  * @size: is the number of elements in array
  * @value: value to search for
  *
- * return: first index where value is located
+ * Return: first index where value is located
  */
-int jump_search(int *array, size_t size, int value){
+int jump_search(int *array, size_t size, int value)
+{
 
 	int index, m, k, prev;
 
